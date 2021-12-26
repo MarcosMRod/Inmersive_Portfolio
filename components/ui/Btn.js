@@ -7,14 +7,20 @@ const Btn = styled.button`
   text-decoration: none;
   color: ${(props) => props.color};
   border: none;
-  /* border: 0.005em solid lightgray; */
   padding: 0.25em 1em;
   border-radius: 2px;
 
   position: relative;
   background: none;
   margin-right: 3em;
+  border: 1px solid transparent;
+  transition: 0.4s ease-out;
+  border-radius: 12px;
 
+  :hover {
+    border: 1px solid #f3f3f3;
+    box-shadow: -10px -10px 15px #f9f9f9 inset;
+  }
   /* brillo inferior */
   ::before {
     pointer-events: none;
@@ -57,14 +63,10 @@ const Btn = styled.button`
   }
 `;
 
-const Button = ({ children, hov, clk, sub }) => {
+const Button = ({ children }) => {
   const mainColor = "black";
 
-  return (
-    <Btn onMouseEnter={hov} onClick={clk} color={mainColor} sub={sub}>
-      {children}
-    </Btn>
-  );
+  return <Btn>{children}</Btn>;
 };
 
 export default Button;
