@@ -21,8 +21,6 @@ class Sfx {
     this.stop = () => {
       Howler.stop();
     };
-
-    // métodos que lanzan sonidos
     this.tap = () => {
       const randomTap = pickRandomElement(["tap", "tap1", "tap2", "tap3"]);
       this.play(randomTap);

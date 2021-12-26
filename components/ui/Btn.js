@@ -12,14 +12,19 @@ const Btn = styled.button`
 
   position: relative;
   background: none;
-  margin-right: 3em;
-  border: 1px solid transparent;
+  margin-right: 6em;
   transition: 0.4s ease-out;
   border-radius: 12px;
+  color: #724530;
 
   :hover {
-    border: 1px solid #f3f3f3;
-    box-shadow: -10px -10px 15px #f9f9f9 inset;
+    box-shadow: 2px 2px 4px darkgray, 0px 0px 6px darkgray inset;
+    color: #a06243;
+    background: #fdeedf;
+  }
+  :active {
+    background: #fee4a3;
+    box-shadow: 1px 1px 4px gray inset, 0px 0px 8px lightgray;
   }
   /* brillo inferior */
   ::before {
@@ -48,7 +53,6 @@ const Btn = styled.button`
     transition: 0.3s;
     border-radius: 50%;
   }
-
   :hover::before {
     opacity: 0.5;
   }

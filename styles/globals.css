@@ -12,4 +12,5 @@ body {
   font-family: Helvetica;
   color: white;
   padding-right: 10rem;
+  overflow: hidden;
 }
